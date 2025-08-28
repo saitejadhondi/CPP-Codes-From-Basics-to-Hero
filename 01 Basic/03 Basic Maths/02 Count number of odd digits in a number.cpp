@@ -7,6 +7,10 @@ Input: n = 5
 Output: 1
 Explanation: 5 is an odd digit.
 
+Time Complexity: O(log10(N)) – In every iteration we are dividing N by 10 (equivalent to the number of digits in N).
+
+Space Complexity: O(1) – Using only couple of variables i.e., constant space.
+
 */
 
 #include<bits/stdc++.h>
