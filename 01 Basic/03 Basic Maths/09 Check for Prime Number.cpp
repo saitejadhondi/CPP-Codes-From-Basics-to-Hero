@@ -1,8 +1,15 @@
 /*
 
 You are given an integer n. 
-Return the integer formed by 
-placing the digits of n in reverse order.
+You need to check if the number is prime or not. 
+Return true if it is a prime number, otherwise return false.
+A prime number is a number 
+which has no divisors except 1 and itself.
+
+Complexity Analysis:
+Time Complexity: O(N) – Looping N times to find the count of all divisors of N.
+
+Space Complexity: O(1) – Using a couple of variables i.e., constant space.
 
 */
 
@@ -11,16 +18,16 @@ using namespace std;
 
 class Solution{
     public:
-        int reverseNumber(int n) {
-        int lastDigit;
-        int revNum=0;
-        while(n>0)
+        bool isPrime(int n) {
+        if(n<2) return false;
+        for(int i=2;i<n;i++)
         {
-            lastDigit = n%10;
-            revNum = revNum*10+lastDigit;
-            n=n/10;
+            if(n%i==0)
+            {
+                return false;
+            }
         }
-        return revNum;
+        return true;
     }
 };
 
@@ -29,6 +36,10 @@ int main()
     Solution sol;
     int n;
     cin >> n;
-    cout << sol.reverseNumber(n);
-    return 0;
+    bool ans = sol.isPrime(n);
+    if (ans) {
+        cout << n << " is a prime number." << endl;
+    } else {
+        cout << n << " is not a prime number." << endl;
+    }
 }
