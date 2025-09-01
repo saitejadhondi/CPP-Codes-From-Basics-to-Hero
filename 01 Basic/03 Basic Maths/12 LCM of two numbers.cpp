@@ -11,24 +11,32 @@ using namespace std;
 
 class Solution{
     public:
-        int reverseNumber(int n) {
-        int lastDigit;
-        int revNum=0;
-        while(n>0)
+        int LCM(int n1,int n2) {
+        int lcm;
+        if(n1<n2)
         {
-            lastDigit = n%10;
-            revNum = revNum*10+lastDigit;
-            n=n/10;
+            lcm=n2;
         }
-        return revNum;
+        else
+        {
+            lcm=n1;
+        }
+        for(int i=lcm;i<=n1*n2;i++)
+        {
+            if(i%n1==0 && i%n2==0)
+            {
+                return i;
+            }
+        }
     }
 };
 
 int main()
 {
     Solution sol;
-    int n;
-    cin >> n;
-    cout << sol.reverseNumber(n);
+    int n1, n2;
+    cin >> n1;
+    cin >> n2;
+    cout << sol.LCM(n1, n2);
     return 0;
 }

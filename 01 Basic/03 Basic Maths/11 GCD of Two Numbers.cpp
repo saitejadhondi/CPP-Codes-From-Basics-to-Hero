@@ -10,6 +10,8 @@ Space Complexity: O(1) – Using a couple of variables i.e., constant space.
 
 */
 
+// METHOD1
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -32,18 +34,6 @@ class Solution{
                 return i;
             }
         }
-/*
-METHOD 2
-while(n1!=0)
-        {
-            if(n1<n2)
-            {
-                n2=n2-n1;
-            }
-            else n1=n1-n2;
-        }
-        return n2;
-*/
     }
 };
 
@@ -58,7 +48,7 @@ int main()
 }
 
 /*
-METHOD 2
+METHOD 2 Logic
 while(n1!=0)
         {
             if(n1<n2)
