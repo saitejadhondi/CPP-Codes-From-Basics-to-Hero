@@ -11,16 +11,16 @@ using namespace std;
 
 class Solution{
     public:
-        int reverseNumber(int n) {
-        int lastDigit;
-        int revNum=0;
-        while(n>0)
+        vector<int> divisors(int n) {
+        vector<int> ans;
+        for(int i=1;i<=n;i++)
         {
-            lastDigit = n%10;
-            revNum = revNum*10+lastDigit;
-            n=n/10;
+            if(n%i==0)
+            {
+                ans.push_back(i);
+            }
         }
-        return revNum;
+        return ans;
     }
 };
 
@@ -29,6 +29,10 @@ int main()
     Solution sol;
     int n;
     cin >> n;
-    cout << sol.reverseNumber(n);
+    vector<int> ans=sol.divisors(n);
+    for(auto i:ans)
+    {
+        cout << i << " ";
+    }
     return 0;
 }
