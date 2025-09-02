@@ -1,9 +1,12 @@
 /*
 
-You are given an integer n. 
-Return the integer formed by 
-placing the digits of n in reverse order.
+You are given an integer n. You need to find all the divisors of n. 
+Return all the divisors of n as an array or list in a sorted order.
+A number which completely divides another number is called it's divisor.
 
+Complexity Analysis:
+Time Complexity: O(N) – Iterating N times, and performing constant time operations in each pass.
+Space Complexity: O(sqrt(N)) – A number N can have at max 2*sqrt(N) divisors, which are stored in the array.
 */
 
 #include<bits/stdc++.h>
