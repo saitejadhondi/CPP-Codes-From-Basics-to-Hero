@@ -1,6 +1,9 @@
 /*
-
-
+Given an array arr of size n, 
+the task is to find the sum of all the elements in the array.
+Time and Space Complexity
+Time Complexity : O(N) The time complexity is O(N) because each element in the array is processed exactly once.
+Space Complexity : O(N)The space complexity is O(N) due to the recursion stack, which can grow up to the size of the array.
 */
 
 #include<bits/stdc++.h>
