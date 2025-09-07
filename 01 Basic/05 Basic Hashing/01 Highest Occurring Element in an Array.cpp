@@ -5,6 +5,10 @@ If there are multiple elements that appear a maximum number of times, find the s
 */
 #include <bits/stdc++.h>
 using namespace std;
+class Solution
+{
+
+};
 int main()
 {
 return 0;
