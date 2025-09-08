@@ -11,5 +11,6 @@ class Solution
 };
 int main()
 {
-return 0;
+    Solution sol;
+    return 0;
 }
