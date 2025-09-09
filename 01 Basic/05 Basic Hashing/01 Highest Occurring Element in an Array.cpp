@@ -7,7 +7,8 @@ If there are multiple elements that appear a maximum number of times, find the s
 using namespace std;
 class Solution
 {
-
+    public:
+    
 };
 int main()
 {
